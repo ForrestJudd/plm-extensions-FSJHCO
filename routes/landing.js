@@ -100,6 +100,7 @@ router.get('/addins/tasks'     , function(req, res, next) { launch('addins/tasks
    ------------------------------------------------------------------------------ */
 router.get('/gallery' , function(req, res, next) { launch('framework/gallery'   , 'UX Components Gallery', req, res, next); });
 router.get('/template', function(req, res, next) { launch('tutorial/1-template' , 'App Template Page'    , req, res, next); });
+router.get('/myapp', function(req, res, next) { launch('acc/myapp' , 'Get ACCC BOM'    , req, res, next); });
 
 
 

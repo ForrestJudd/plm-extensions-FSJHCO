@@ -1,5 +1,6 @@
 $(document).ready(function() {
     
-    insertMOW();
+    //insertMOW();
+    alert("Hey")
 
 });

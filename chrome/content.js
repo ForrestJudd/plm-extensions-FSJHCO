@@ -3,7 +3,7 @@
 //  Users can change this URL using the options dialog of the extension
 //  Anyway, the URLs will only work if they are also listed in 'host_permissions' in manifest.json
 
-let serverUrl = 'http://localhost:8080';
+let serverUrl = 'https://plmuxextensions-dneneecbe3fqdwgd.canadacentral-01.azurewebsites.net/';
 
 //  Do not mofify the code below this line
 // ------------------------------------------------------------------------------------------------------
@@ -15,6 +15,13 @@ let buttons     = [];
 let workspaces  = {};
 let maxLevel    = 0;
 let customStyle = false;
+
+//add filter capability to Managed Items tab
+chrome.runtime.onMessage.AddListener((obj, sender, response) => {
+    const {dmsId} = obj;
+    
+
+})
 
 
 // Retrieve command and button settings from UX Server based on settings.js (see exports.chrome)

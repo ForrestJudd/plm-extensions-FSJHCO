@@ -108,7 +108,7 @@ router.get('/myapp', function(req, res, next) { launch('acc/myapp' , 'Get ACCC B
     CUSTOM APPLICATIONS
    ------------------------------------------------------------------------------ */
 router.get('/playground' , function(req, res, next) { launch('custom/playground'   , 'UX Playground', req, res, next); });
-
+router.get('/bloxbom'    , function(req, res, next) { launch('custom/bloxbom'            , 'BLOX BOM Editor'     , req, res, next); });
 
 
 /* ------------------------------------------------------------------------------

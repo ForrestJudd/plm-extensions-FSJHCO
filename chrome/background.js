@@ -8,3 +8,16 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		return true;
 	}
 });
+
+chrome.tabs.onUpdated.addListener((tabId, tab) => {
+	if (tab.url && tab.url.includes("autodeskplm360.net") && tab.url.includes("affected-items"))
+	{
+		const queryParameters = tab.url.split("?")[1];
+		const urlParameters = new URLSearchParams(queryParameters);
+		const recordDMSID = urlParameters.get("itemId").split(",")[-1];
+		console.log(dmsID);
+		chrome.tabs.sendMessage(tabId, {
+			dmsID: recordDMSID
+		})
+	}
+})

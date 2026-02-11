@@ -18,6 +18,8 @@ if ((process.argv.length > 2) && (!fs.existsSync('./' + fileSettings))) {
   
 } else {
 
+    const multer = require('multer');
+    const csv = require('csv-parser');
     const express     = require('express');
     const session     = require('express-session');
     const path        = require('path');
